@@ -13,6 +13,8 @@ export LANG=ja_JP.UTF-8
 
 zstyle ':completion:*' list-colors ''
 
+export PATH=$PATH:/usr/local/mysql/bin
+
 PROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%} 
 [%m]%# "
 RPROMPT=""
