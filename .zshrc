@@ -17,8 +17,6 @@ export LANG=ja_JP.UTF-8
 
 zstyle ':completion:*' list-colors ''
 
-export PATH=$PATH:/usr/local/mysql/bin
-
 PROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%} 
 [%m]%# "
 RPROMPT=""
@@ -31,3 +29,4 @@ alias ls="ls -G"
 [ -f ~/.zshrc.live2 ] && source ~/.zshrc.live2
 [ -f ~/.zshrc.python ] && source ~/.zshrc.python
 [ -f ~/.zshrc.ruby ] && source ~/.zshrc.ruby
+[ -f ~/.zshrc.mysql ] && source ~/.zshrc.mysql
