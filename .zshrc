@@ -25,8 +25,8 @@ export LSCOLORS=ExFxCxdxBxegedabagacad
 export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 alias ls="ls -G"
 
-[ -f ~/.zshrc.mine ] && source ~/.zshrc.mine
-[ -f ~/.zshrc.live2 ] && source ~/.zshrc.live2
-[ -f ~/.zshrc.python ] && source ~/.zshrc.python
-[ -f ~/.zshrc.ruby ] && source ~/.zshrc.ruby
-[ -f ~/.zshrc.mysql ] && source ~/.zshrc.mysql
+[ -f ~/dotfiles/.zshrc.mine ] && source ~/dotfiles/.zshrc.mine
+[ -f ~/dotfiles/.zshrc.live2 ] && source ~/.zshrc.live2
+[ -f ~/dotfiles/.zshrc.python ] && source ~/.zshrc.python
+[ -f ~/dotfiles/.zshrc.ruby ] && source ~/dotfiles/.zshrc.ruby
+[ -f ~/dotfiles/.zshrc.mysql ] && source ~/.zshrc.mysql
