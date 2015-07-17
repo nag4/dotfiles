@@ -1,0 +1,4 @@
+# source "$HOME/.pythonbrew/etc/bashrc"
+alias activate-python3='source bin/activate'
+alias deactivate-python3='deactivate'
+
