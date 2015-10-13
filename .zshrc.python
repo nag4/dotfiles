@@ -1,4 +1,7 @@
 # source "$HOME/.pythonbrew/etc/bashrc"
-alias activate-python3='source bin/activate'
-alias deactivate-python3='deactivate'
+
+# for venv (python standard module)
+# for vertualenv 
+alias activate-python='source bin/activate'
+alias deactivate-python='deactivate'
 
