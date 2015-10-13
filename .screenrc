@@ -4,3 +4,4 @@ autodetach on
 defscrollback 10000
 hardstatus alwayslastline "%`%-w%{=b bw}%n %t%{-}%+w"
 cjkwidth on
+escape ^Tt
