@@ -25,6 +25,9 @@ export LSCOLORS=ExFxCxdxBxegedabagacad
 export LS_COLORS='di=01;34:ln=01;35:so=01;32:ex=01;31:bd=46;34:cd=43;34:su=41;30:sg=46;30:tw=42;30:ow=43;30'
 alias ls="ls -G"
 
+# git merge で commit message用editor を表示しない
+export GIT_MERGE_AUTOEDIT=no
+
 [ -f ~/dotfiles/.zshrc.mine ] && source ~/dotfiles/.zshrc.mine
 [ -f ~/dotfiles/.zshrc.live2 ] && source ~/dotfiles/.zshrc.live2
 [ -f ~/dotfiles/.zshrc.python ] && source ~/dotfiles/.zshrc.python
