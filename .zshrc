@@ -28,8 +28,13 @@ alias ls="ls -G"
 # git merge で commit message用editor を表示しない
 export GIT_MERGE_AUTOEDIT=no
 
+# sshするとき新しいウィンドウを開きlogin先host名をつける
+function sshscreen(){
+ eval server=\${$#}
+ screen -t $server ssh "$@"
+}
+
 [ -f ~/dotfiles/.zshrc.mine ] && source ~/dotfiles/.zshrc.mine
-[ -f ~/dotfiles/.zshrc.live2 ] && source ~/dotfiles/.zshrc.live2
 [ -f ~/dotfiles/.zshrc.python ] && source ~/dotfiles/.zshrc.python
 [ -f ~/dotfiles/.zshrc.ruby ] && source ~/dotfiles/.zshrc.ruby
 [ -f ~/dotfiles/.zshrc.mysql ] && source ~/dotfiles/.zshrc.mysql
