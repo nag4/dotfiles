@@ -38,3 +38,6 @@ function sshscreen(){
 [ -f ~/dotfiles/.zshrc.python ] && source ~/dotfiles/.zshrc.python
 [ -f ~/dotfiles/.zshrc.ruby ] && source ~/dotfiles/.zshrc.ruby
 [ -f ~/dotfiles/.zshrc.mysql ] && source ~/dotfiles/.zshrc.mysql
+
+# tree コマンドの代用
+alias findtree="find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
