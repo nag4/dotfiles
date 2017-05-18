@@ -18,7 +18,7 @@ export LANG=ja_JP.UTF-8
 zstyle ':completion:*' list-colors ''
 
 PROMPT="%{${fg[yellow]}%}[%~]%{${reset_color}%} 
-[%m]%# "
+[%n@%m]%# "
 RPROMPT=""
 
 export LSCOLORS=ExFxCxdxBxegedabagacad
