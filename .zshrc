@@ -28,10 +28,36 @@ alias ls="ls -G"
 # git merge で commit message用editor を表示しない
 export GIT_MERGE_AUTOEDIT=no
 
-# sshするとき新しいウィンドウを開きlogin先host名をつける
-function sshscreen(){
- eval server=\${$#}
- screen -t $server ssh "$@"
+# ターミナルの profile を使って色を指定する関数
+set_profile() {
+  local profile=$1
+  /usr/bin/osascript <<EOF
+tell application "Terminal" to set current settings of first window to settings set "$profile"
+EOF
+}
+
+# sshするとき背景色を変更するコマンド
+function sshcolor(){
+  # ssh 先によって色を使い分ける
+  if [[ "$@" =~ dev ]]; then
+    set_profile "Novel"
+  elif [[ "$@" =~ adv-dev-manage ]]; then # TODO 本番用設定
+    set_profile "Red Sands"
+  fi
+
+  # screen title を変更する
+  echo -ne "\033k$@\033\\"
+
+  # ssh
+  ssh $@
+
+  # ↓ssh を抜けた時↓
+
+  # profile を変更する
+  set_profile "Pro"
+
+  # screen title を変更する
+  echo -ne "\033kzsh\033\\"
 }
 
 [ -f ~/dotfiles/.zshrc.mine ] && source ~/dotfiles/.zshrc.mine
