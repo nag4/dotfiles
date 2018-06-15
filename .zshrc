@@ -36,3 +36,6 @@ export GIT_MERGE_AUTOEDIT=no
 
 # tree コマンドの代用
 alias findtree="find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
+
+# ssh bg color
+alias ssh='~/dotfiles/ssh-background'
