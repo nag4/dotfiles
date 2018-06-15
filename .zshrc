@@ -33,6 +33,7 @@ export GIT_MERGE_AUTOEDIT=no
 [ -f ~/dotfiles/.zshrc.ruby ] && source ~/dotfiles/.zshrc.ruby
 [ -f ~/dotfiles/.zshrc.mysql ] && source ~/dotfiles/.zshrc.mysql
 [ -f ~/dotfiles/.zshrc.ads ] && source ~/dotfiles/.zshrc.ads
+[ -f ~/dotfiles/.zshrc.composer ] && source ~/dotfiles/.zshrc.composer
 
 # tree コマンドの代用
 alias findtree="find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*/| /g'"
