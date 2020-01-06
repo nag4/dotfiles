@@ -40,3 +40,5 @@ alias findtree="find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*
 
 # ssh bg color
 alias ssh='~/dotfiles/ssh-background'
+
+# hoge
