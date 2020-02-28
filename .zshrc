@@ -41,4 +41,5 @@ alias findtree="find . | sort | sed '1d;s/^\.//;s/\/\([^/]*\)$/|--\1/;s/\/[^/|]*
 # ssh bg color
 alias ssh='~/dotfiles/ssh-background'
 
-# hoge
+# node
+export PATH=$PATH:/Users/m1068/.nodebrew/current/bin
