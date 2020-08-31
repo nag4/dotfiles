@@ -43,3 +43,20 @@ alias ssh='~/dotfiles/ssh-background'
 
 # node
 export PATH=$PATH:/Users/m1068/.nodebrew/current/bin
+
+# Erase PDF password.
+#
+# usage:
+#    $ erasepp filename.pdf password
+#
+# Need "qpdf".
+# $ brew install qpdf
+#
+function erasepp (){
+  qpdf --password=$2 --decrypt $1 tmp_unlockpdf.pdf
+  if [ -e tmp_unlockpdf.pdf ]; then
+    mv $1 $1.old
+    mv tmp_unlockpdf.pdf $1
+    rm $1.old
+  fi
+}
