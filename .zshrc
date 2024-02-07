@@ -1,4 +1,5 @@
-# configure
+# 起動時のディレクトリを指定する
+cd ~/Downloads
 
 # homebrewでinstallしたgitの補完を効かせる
 fpath=($(brew --prefix)/share/zsh/site-functions $fpath)
@@ -56,6 +57,23 @@ function erasepp (){
   if [ -e tmp_unlockpdf.pdf ]; then
     mv $1 $1.old
     mv tmp_unlockpdf.pdf $1
+    rm $1.old
+  fi
+}
+
+# compressed PDF.
+#
+# usage:
+#    $ compresspdf filename.pdf
+#
+# Need "ghostscript".
+# $ brew install ghostscript
+#
+function compresspdf (){
+  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/ebook -dNOPAUSE -dQUIET -dBATCH -sOutputFile=tmp_output.pdf $1
+  if [ -e tmp_output.pdf ]; then
+    mv $1 $1.old
+    mv tmp_output.pdf $1
     rm $1.old
   fi
 }
